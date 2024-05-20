@@ -63,6 +63,10 @@ class Auto3dSegRunner(ModelRunner):
     def task(self, instance: Instance, image: InstanceData, structures: InstanceData) -> None:
         # Question: is this just a logging output?
         self.v("Running the abdominal segmentation.")
+
+        # *** hardcode the model weights location until figuring out
+        # the initialization method
+        modelCheckpointFilePath = '/root/.cache/torch/hub/checkpoints/model.pt'
         # Question: does this need to be in a subprocess?
         # run auto3dseg abdominal model
         self.model_inference(modelCheckpointFilePath,inputImageFilePath,outputFilePath) 
