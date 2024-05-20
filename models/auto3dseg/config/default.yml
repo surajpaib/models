@@ -1,0 +1,32 @@
+general:
+  data_base_dir: /app/data
+  version: 1.0
+  description: "Default configuration for MONAIAuto3dSeg (dicom in, dicom out)"
+
+execute:
+- DicomImporter
+- NrrdConverter
+- Auto3dSegRunner
+- DsegConverter
+- DataOrganizer
+
+modules:
+  DicomImporter:
+    source_dir: input_data
+    import_dir: sorted_data
+    sort_data: True
+    meta: 
+      mod: '%Modality'
+
+  LungMaskRunner:
+    batchsize: 64
+
+  DsegConverter:
+    model_name: Auto3dSeg
+    body_part_examined: CHEST
+    source_segs: nrrd:mod=seg:roi=*
+    skip_empty_slices: True
+  
+  DataOrganizer:
+    targets:
+    - dicomseg:mod=seg-->[i:sid]/auto3dseg.seg.dcm
