@@ -270,7 +270,7 @@ class Auto3dSegRunner(ModelRunner):
                     ConcatItemsd(keys=keys, name="image", dim=0),
                     EnsureTyped(keys="image", data_type="tensor", dtype=torch.float, allow_missing_keys=True)
                 ]
-                _add_normalization_transforms(ts, "image", main_normalize_mode, intensity_bounds)
+                self._add_normalization_transforms(ts, "image", main_normalize_mode, intensity_bounds)
             else:  # multiple input images
                 ts = [
                 ]
@@ -278,7 +278,7 @@ class Auto3dSegRunner(ModelRunner):
                 extra_modalities = OrderedDict(config['extra_modalities'])
                 normalize_modes = [main_normalize_mode] + list(extra_modalities.values())
                 for key, normalize_mode in zip(keys, normalize_modes):
-                    _add_normalization_transforms(ts, key, normalize_mode, intensity_bounds)
+                    self._add_normalization_transforms(ts, key, normalize_mode, intensity_bounds)
                 ts.extend([
                     ConcatItemsd(keys=keys, name="image", dim=0),
                     EnsureTyped(keys="image", data_type="tensor", dtype=torch.float, allow_missing_keys=True)
@@ -367,8 +367,6 @@ class Auto3dSegRunner(ModelRunner):
         seg_img = nib.Nifti1Image(seg,affine=input_affine,header=nifti_img.header)
         nib.save(seg_img, filename=result_file)
         timing_checkpoints.append(("Save", time.time()))
-
-    
         print("Computation time log:")
         previous_start_time = start_time
         for timing_checkpoint in timing_checkpoints:
