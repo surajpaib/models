@@ -22,6 +22,7 @@ import numpy as np
 import time
 import torch
 from collections import OrderedDict
+import nibabel as nib
 
 import nrrd
 from monai.bundle import ConfigParser
@@ -361,9 +362,17 @@ class Auto3dSegRunner(ModelRunner):
         timing_checkpoints.append(("Convert to array", time.time()))
 
         # save result by copying all image metadata from the input, just replacing the voxel data
-        nrrd_header = nrrd.read_header(image_file)
-        nrrd.write(result_file, seg, nrrd_header)
+        nifti_img = nib.load(image_file)
+        input_affine = nifti_img.affine
+        seg_img = nib.Nifti1Image(seg,affine=input_affine,header=nifti_img.header)
+        nib.save(seg_img, filename=result_file)
+
         timing_checkpoints.append(("Save", time.time()))
+
+        nifti_img = nib.load(image_file)
+        input_affine = nifti_img.affine
+        seg_img = nib.Nifti1Image(seg,affine=input_affine,header=nifti_img.header)
+        nib.save(seg_img, filename=result_file)
 
         print("Computation time log:")
         previous_start_time = start_time

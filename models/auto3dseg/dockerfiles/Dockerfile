@@ -4,8 +4,8 @@ FROM mhubai/base:latest
 # load prerequisites 
 RUN echo "loading prerequisite libraries"
 RUN pip3 install  "monai-weekly[nibabel,tqdm]"
-RUN pip3 install pynrrd
-
+RUN pip install pynrrd
+ 
 # Import the MHub model definiton
 # *** hardcoding for now
 ARG MHUB_MODELS_REPO="https://github.com/curtislisle/mhub_models"
@@ -30,6 +30,6 @@ RUN unzip ${MODEL_NAME}
 
 
 # Default run script
-ENTRYPOINT ["python3", "-m", "mhubio.run"]
-CMD ["--config", "/app/models/auto3dseg/config/default.yml"]
-#ENTRYPOINT ["/bin/bash"]
+#ENTRYPOINT ["python3", "-m", "mhubio.run"]
+#CMD ["--config", "/app/models/auto3dseg/config/default.yml"]
+ENTRYPOINT ["/bin/bash"]

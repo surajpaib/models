@@ -5,7 +5,7 @@ general:
 
 execute:
 - DicomImporter
-- NrrdConverter
+- NiftiConverter
 - Auto3dSegRunner
 - DsegConverter
 - DataOrganizer
@@ -17,9 +17,6 @@ modules:
     sort_data: True
     meta: 
       mod: '%Modality'
-
-  LungMaskRunner:
-    batchsize: 64
 
   DsegConverter:
     model_name: Auto3dSeg
