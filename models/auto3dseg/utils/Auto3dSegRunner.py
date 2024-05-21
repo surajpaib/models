@@ -73,7 +73,7 @@ class Auto3dSegRunner(ModelRunner):
 
 
     # from auto3dseg_segresnet_inference.py
-    def logits2pred(logits, sigmoid=False, dim=1):
+    def logits2pred(self,logits, sigmoid=False, dim=1):
         if isinstance(logits, (list, tuple)):
             logits = logits[0]
 
@@ -88,7 +88,7 @@ class Auto3dSegRunner(ModelRunner):
 
     # from auto3dseg_segresnet_inference.py 
     @torch.no_grad()
-    def model_inference(model_file,
+    def model_inference(self,model_file,
             image_file,
             result_file,
             save_mode=None,
@@ -378,7 +378,7 @@ class Auto3dSegRunner(ModelRunner):
         print(f'ALL DONE, result saved in {result_file}')
 
 
-    def _add_normalization_transforms(ts, key, normalize_mode, intensity_bounds):
+    def _add_normalization_transforms(self,ts, key, normalize_mode, intensity_bounds):
         if normalize_mode == "none":
             pass
         elif normalize_mode in ["range", "ct"]:
