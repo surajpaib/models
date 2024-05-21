@@ -69,7 +69,7 @@ class Auto3dSegRunner(ModelRunner):
         modelCheckpointFilePath = '/root/.cache/torch/hub/checkpoints/model.pt'
         # Question: does this need to be in a subprocess?
         # run auto3dseg abdominal model
-        self.model_inference(modelCheckpointFilePath,inputImageFilePath,outputFilePath) 
+        self.model_inference(modelCheckpointFilePath,image.abspath,structures.abspath) 
 
 
     # from auto3dseg_segresnet_inference.py
