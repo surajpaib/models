@@ -1,8 +1,5 @@
 FROM mhubai/base:latest
 
-# Install LungMask
-RUN pip3 install --no-cache-dir \
-    lungmask==0.2.16
   
 # load prerequisites 
 RUN echo "loading prerequisite libraries"
@@ -33,6 +30,6 @@ RUN unzip ${MODEL_NAME}
 
 
 # Default run script
-ENTRYPOINT ["python3", "-m", "mhubio.run"]
-CMD ["--config", "/app/models/auto3dseg/config/default.yml"]
-#ENTRYPOINT ["/bin/bash"]
+#ENTRYPOINT ["python3", "-m", "mhubio.run"]
+#CMD ["--config", "/app/models/auto3dseg/config/default.yml"]
+ENTRYPOINT ["/bin/bash"]

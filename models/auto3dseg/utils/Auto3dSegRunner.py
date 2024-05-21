@@ -50,11 +50,10 @@ from monai.transforms import (
 
 
 
-@IO.Config('batchsize', int, 64, the='Number of slices to be processed simultaneously. A smaller batch size requires less memory but may be slower.')
-
+#@IO.Config('batchsize', int, 64, the='Number of slices to be processed simultaneously. A smaller batch size requires less memory but may be slower.')
 class Auto3dSegRunner(ModelRunner):
     
-    batchsize: int
+    #batchsize: int
 
     # Question:  I don't understand how the channels are specified in the 'roi' argument
     @IO.Instance()
