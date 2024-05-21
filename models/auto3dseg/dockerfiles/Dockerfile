@@ -30,6 +30,6 @@ RUN unzip ${MODEL_NAME}
 
 
 # Default run script
-#ENTRYPOINT ["python3", "-m", "mhubio.run"]
-#CMD ["--config", "/app/models/auto3dseg/config/default.yml"]
-ENTRYPOINT ["/bin/bash"]
+ENTRYPOINT ["python3", "-m", "mhubio.run"]
+CMD ["--config", "/app/models/auto3dseg/config/default.yml"]
+#ENTRYPOINT ["/bin/bash"]
