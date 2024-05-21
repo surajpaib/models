@@ -100,7 +100,7 @@ class Auto3dSegRunner(ModelRunner):
         timing_checkpoints = []  # list of (operation, time) tuples
 
         # Checking for model file
-
+        print('modelpath:',model_file)
         if not os.path.exists(model_file):
             raise ValueError('Cannot find model file:' + str(model_file))
 
@@ -366,14 +366,9 @@ class Auto3dSegRunner(ModelRunner):
         input_affine = nifti_img.affine
         seg_img = nib.Nifti1Image(seg,affine=input_affine,header=nifti_img.header)
         nib.save(seg_img, filename=result_file)
-
         timing_checkpoints.append(("Save", time.time()))
 
-        nifti_img = nib.load(image_file)
-        input_affine = nifti_img.affine
-        seg_img = nib.Nifti1Image(seg,affine=input_affine,header=nifti_img.header)
-        nib.save(seg_img, filename=result_file)
-
+    
         print("Computation time log:")
         previous_start_time = start_time
         for timing_checkpoint in timing_checkpoints:

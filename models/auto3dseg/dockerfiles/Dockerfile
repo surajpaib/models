@@ -11,6 +11,8 @@ RUN echo 'model defined remotely again...'
 # *** hardcoding for now
 ARG MHUB_MODELS_REPO="https://github.com/curtislisle/mhub_models"
 RUN buildutils/import_mhub_model.sh auto3dseg ${MHUB_MODELS_REPO}
+#WORKDIR auto3dseg
+#COPY . /app/models/
 
 # pull the weights for the segresnet model trained on the abdominal total
 # segmentator data model from the MONAIAuto3DSeg Slicer extension repository
