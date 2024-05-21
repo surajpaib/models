@@ -24,7 +24,7 @@ import torch
 from collections import OrderedDict
 import nibabel as nib
 
-import nrrd
+#import nrrd
 from monai.bundle import ConfigParser
 from monai.data import decollate_batch, list_data_collate
 from monai.utils import convert_to_dst_type
