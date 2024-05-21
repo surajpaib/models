@@ -58,8 +58,8 @@ class Auto3dSegRunner(ModelRunner):
 
     # Question:  I don't understand how the channels are specified in the 'roi' argument
     @IO.Instance()
-    @IO.Input('image', 'nrrd:mod=ct',  the='input ct scan')
-    @IO.Output('structures', 'structures.nrrd', 'nrrd:mod=seg:model=Auto3dSeg:roi=Left_Adrenal_gland,Right_Adrenal_gland,Colon,Duodenum,Esophagus,Gallbladder,Left_Kidney,Right_Kidney,Liver,Left_Lower_lobe_of_lung,Right_Lower_lobe_of_lung,Middle_lobe_of_right_lung,Left_Upper_lobe_of_lung,Right_Upper_lobe_of_lung,Pancreas,Small_Intestine,Spleen,Stomach,Trachea,Urinary_bladder,Cyst_in_Left_Kidney,Cyst_in_Right_Kidney,Prostate', bundle='model', the='predicted abdominal organs segmentation')
+    @IO.Input('image', 'nifti:mod=ct',  the='input ct scan')
+    @IO.Output('structures', 'structures.nii.gz', 'nifti:mod=seg:model=Auto3dSeg:roi=Left_Adrenal_gland,Right_Adrenal_gland,Colon,Duodenum,Esophagus,Gallbladder,Left_Kidney,Right_Kidney,Liver,Left_Lower_lobe_of_lung,Right_Lower_lobe_of_lung,Middle_lobe_of_right_lung,Left_Upper_lobe_of_lung,Right_Upper_lobe_of_lung,Pancreas,Small_Intestine,Spleen,Stomach,Trachea,Urinary_bladder,Cyst_in_Left_Kidney,Cyst_in_Right_Kidney,Prostate', bundle='model', the='predicted abdominal organs segmentation')
     def task(self, instance: Instance, image: InstanceData, structures: InstanceData) -> None:
         # Question: is this just a logging output?
         self.v("Running the abdominal segmentation.")

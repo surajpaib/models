@@ -4,8 +4,9 @@ FROM mhubai/base:latest
 # load prerequisites 
 RUN echo "loading prerequisite libraries"
 RUN pip3 install  "monai-weekly[nibabel,tqdm]"
-RUN pip install pynrrd
- 
+#RUN pip install pynrrd
+RUN echo 'model defined remotely'
+
 # Import the MHub model definiton
 # *** hardcoding for now
 ARG MHUB_MODELS_REPO="https://github.com/curtislisle/mhub_models"
