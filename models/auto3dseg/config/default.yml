@@ -21,7 +21,8 @@ modules:
   DsegConverter:
     model_name: Auto3dSeg
     body_part_examined: CHEST
-    source_segs: nifti:mod=seg:roi=*
+    source_segs: nifti:mod=seg
+    json_config_path: /app/models/auto3dseg/config/Auto3DSeg-TS-V2-Abdominal.json
     skip_empty_slices: True
   
   DataOrganizer:

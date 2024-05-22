@@ -5,7 +5,7 @@ FROM mhubai/base:latest
 RUN echo "loading prerequisite libraries"
 RUN pip3 install  "monai-weekly[nibabel,tqdm]"
 #RUN pip install pynrrd
-RUN echo 'model defined remotely again .'
+RUN echo 'model defined remotely again ..'
 
 # Import the MHub model definiton
 # *** hardcoding for now
