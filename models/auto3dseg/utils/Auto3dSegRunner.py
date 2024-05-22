@@ -59,7 +59,7 @@ class Auto3dSegRunner(ModelRunner):
     # Question:  I don't understand how the channels are specified in the 'roi' argument
     @IO.Instance()
     @IO.Input('image', 'nifti:mod=ct',  the='input ct scan')
-    @IO.Output('structures', 'structures.nii.gz', 'nifti:mod=seg:model=Auto3dSeg:roi=Left_Adrenal_gland,Right_Adrenal_gland,Colon,Duodenum,Esophagus,Gallbladder,Left_Kidney,Right_Kidney,Liver,Left_Lower_lobe_of_lung,Right_Lower_lobe_of_lung,Middle_lobe_of_right_lung,Left_Upper_lobe_of_lung,Right_Upper_lobe_of_lung,Pancreas,Small_Intestine,Spleen,Stomach,Trachea,Urinary_bladder,Cyst_in_Left_Kidney,Cyst_in_Right_Kidney,Prostate', bundle='model', the='predicted abdominal organs segmentation')
+    @IO.Output('structures', 'structures.nii.gz', 'nifti:mod=seg:model=Auto3dSeg', bundle='model', the='predicted abdominal organs segmentation')
     def task(self, instance: Instance, image: InstanceData, structures: InstanceData) -> None:
         # Question: is this just a logging output?
         self.v("Running the abdominal segmentation.")
@@ -198,13 +198,13 @@ class Auto3dSegRunner(ModelRunner):
             # logits -> preds
             print('Converting logits into predictions')
             try:
-                pred = logits2pred(logits, sigmoid=sigmoid)
+                pred = self.logits2pred(logits, sigmoid=sigmoid)
             except RuntimeError as e:
                 if not logits.is_cuda:
                     raise e
                 print(f"logits2pred failed on GPU pred retrying on CPU {logits.shape}")
                 logits = logits.cpu()
-                pred = logits2pred(logits, sigmoid=sigmoid)
+                pred = self.logits2pred(logits, sigmoid=sigmoid)
             print(f"preds {pred.shape}")
             timing_checkpoints.append(("Logits", time.time()))
             logits = None
@@ -334,13 +334,13 @@ class Auto3dSegRunner(ModelRunner):
             # logits -> preds
             print('Converting logits into predictions')
             try:
-                pred = logits2pred(logits, sigmoid=sigmoid)
+                pred = self.logits2pred(logits, sigmoid=sigmoid)
             except RuntimeError as e:
                 if not logits.is_cuda:
                     raise e
                 print(f"logits2pred failed on GPU pred retrying on CPU {logits.shape}")
                 logits = logits.cpu()
-                pred = logits2pred(logits, sigmoid=sigmoid)
+                pred = self.logits2pred(logits, sigmoid=sigmoid)
             print(f"preds {pred.shape}")
             timing_checkpoints.append(("Logits", time.time()))
             logits = None
@@ -363,8 +363,11 @@ class Auto3dSegRunner(ModelRunner):
 
         # save result by copying all image metadata from the input, just replacing the voxel data
         nifti_img = nib.load(image_file)
+        # get the affine matrix from the input image
         input_affine = nifti_img.affine
+        # create a segmentation image with the same affine matrix and header as the input image
         seg_img = nib.Nifti1Image(seg,affine=input_affine,header=nifti_img.header)
+        # save the image as a nifti file
         nib.save(seg_img, filename=result_file)
         timing_checkpoints.append(("Save", time.time()))
         print("Computation time log:")
