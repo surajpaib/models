@@ -52,17 +52,17 @@ from monai.transforms import (
 
 
 #@IO.Config('batchsize', int, 64, the='Number of slices to be processed simultaneously. A smaller batch size requires less memory but may be slower.')
-class Auto3dSegRunner(ModelRunner):
+class A3DS_Vertebrae_Runner(ModelRunner):
     
     #batchsize: int
 
     # Question:  I don't understand how the channels are specified in the 'roi' argument
     @IO.Instance()
     @IO.Input('image', 'nifti:mod=ct',  the='input ct scan')
-    @IO.Output('structures', 'structures.nii.gz', 'nifti:mod=seg:model=Auto3dSeg', bundle='model', the='predicted abdominal organs segmentation')
+    @IO.Output('structures', 'structures.nii.gz', 'nifti:mod=seg:model=a3ds-vertebrae', bundle='model', the='predicted spinal vertebrae')
     def task(self, instance: Instance, image: InstanceData, structures: InstanceData) -> None:
         # Question: is this just a logging output?
-        self.v("Running the abdominal segmentation.")
+        self.v("Running the segmentation.")
 
         # *** hardcode the model weights location until figuring out
         # the initialization method
