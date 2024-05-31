@@ -22,7 +22,6 @@ modules:
     model_name: Auto3dSeg
     body_part_examined: CHEST
     source_segs: nifti:mod=seg
-    #json_config_path: /app/models/auto3dseg/config/Auto3DSeg-TS-V2-Abdominal.json
     json_config_path: /app/models/auto3dseg/config/auto-gen-auto3dseg.json
  
     skip_empty_slices: True
