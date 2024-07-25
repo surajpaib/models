@@ -1,0 +1,29 @@
+general:
+  data_base_dir: /app/data
+  version: 1.0
+  description: Auto3dSeg segmentation default (dicom to dicom)
+
+execute:
+- FileStructureImporter
+- NrrdConverter
+- Auto3dSegRunner
+- JsonSegExporter
+- DataOrganizer
+
+modules:
+  FileStructureImporter:
+    structures: 
+    - image.nrrd@instance@nrrd:mod=ct
+
+  LungMaskRunner:
+    batchsize: 32
+
+  JsonSegExporter:
+    segment_id_meta_key: roi
+    targets:
+    - nrrd:mod=seg-->[basename]
+
+  DataOrganizer:
+    targets:
+    - nrrd:mod=seg-->[basename]
+    - json:mod=seg-->segdef.json

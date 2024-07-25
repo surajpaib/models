@@ -1,0 +1,595 @@
+{
+  "ContentCreatorName": "Andras Lasso",
+  "ClinicalTrialSeriesID": "AutoSeg3D-TS-Abdominal",
+  "ClinicalTrialTimePointID": "1",
+  "SeriesDescription": "Segmentation",
+  "SeriesNumber": "300",
+  "InstanceNumber": "1",
+  "BodyPartExamined": "Abdominal organs",
+  "segmentAttributes": [
+    [
+      {
+        "labelID": 1,
+        "SegmentDescription": "Unknown",
+        "SegmentAlgorithmType": "AUTOMATIC",
+        "SegmentAlgorithmName": "Auto3DSeg-segresnet",
+        "SegmentedPropertyCategoryCodeSequence": {
+          "CodeValue": "123037004",
+          "CodingSchemeDesignator": "SCT",
+          "CodeMeaning": "Anatomical Structure"
+        },
+        "SegmentedPropertyTypeCodeSequence": {
+          "CodeValue": "64033007",
+          "CodingSchemeDesignator": "SCT",
+          "CodeMeaning": "Kidney"
+        },
+        "SegmentedPropertyTypeModifierCodeSequence": {
+          "CodeValue": "24028007",
+          "CodingSchemeDesignator": "SCT",
+          "CodeMeaning": "Right"
+        },
+        "recommendedDisplayRGBValue": [
+          205,
+          149,
+          149
+        ]
+      },
+      {
+        "labelID": 2,
+        "SegmentDescription": "Right Kidney",
+        "SegmentAlgorithmType": "AUTOMATIC",
+        "SegmentAlgorithmName": "Auto3DSeg-segresnet",
+        "SegmentedPropertyCategoryCodeSequence": {
+          "CodeValue": "123037004",
+          "CodingSchemeDesignator": "SCT",
+          "CodeMeaning": "Anatomical Structure"
+        },
+        "SegmentedPropertyTypeCodeSequence": {
+          "CodeValue": "64033007",
+          "CodingSchemeDesignator": "SCT",
+          "CodeMeaning": "Kidney"
+        },
+        "SegmentedPropertyTypeModifierCodeSequence": {
+          "CodeValue": "24028007",
+          "CodingSchemeDesignator": "SCT",
+          "CodeMeaning": "Right"
+        },
+        "recommendedDisplayRGBValue": [
+          205,
+          149,
+          149
+        ]
+      },
+      {
+        "labelID": 3,
+        "SegmentDescription": "Left Kidney",
+        "SegmentAlgorithmType": "AUTOMATIC",
+        "SegmentAlgorithmName": "Auto3DSeg-segresnet",
+        "SegmentedPropertyCategoryCodeSequence": {
+          "CodeValue": "123037004",
+          "CodingSchemeDesignator": "SCT",
+          "CodeMeaning": "Anatomical Structure"
+        },
+        "SegmentedPropertyTypeCodeSequence": {
+          "CodeValue": "64033007",
+          "CodingSchemeDesignator": "SCT",
+          "CodeMeaning": "Kidney"
+        },
+        "SegmentedPropertyTypeModifierCodeSequence": {
+          "CodeValue": "7771000",
+          "CodingSchemeDesignator": "SCT",
+          "CodeMeaning": "Left"
+        },
+        "recommendedDisplayRGBValue": [
+          161,
+          122,
+          122
+        ]
+      },
+      {
+        "labelID": 4,
+        "SegmentDescription": "Gallbladder",
+        "SegmentAlgorithmType": "AUTOMATIC",
+        "SegmentAlgorithmName": "Auto3DSeg-segresnet",
+        "SegmentedPropertyCategoryCodeSequence": {
+          "CodeValue": "123037004",
+          "CodingSchemeDesignator": "SCT",
+          "CodeMeaning": "Anatomical Structure"
+        },
+        "SegmentedPropertyTypeCodeSequence": {
+          "CodeValue": "28231008",
+          "CodingSchemeDesignator": "SCT",
+          "CodeMeaning": "Gallbladder"
+        },
+        "recommendedDisplayRGBValue": [
+          139,
+          150,
+          98
+        ]
+      },
+      {
+        "labelID": 5,
+        "SegmentDescription": "Liver",
+        "SegmentAlgorithmType": "AUTOMATIC",
+        "SegmentAlgorithmName": "Auto3DSeg-segresnet",
+        "SegmentedPropertyCategoryCodeSequence": {
+          "CodeValue": "123037004",
+          "CodingSchemeDesignator": "SCT",
+          "CodeMeaning": "Anatomical Structure"
+        },
+        "SegmentedPropertyTypeCodeSequence": {
+          "CodeValue": "10200004",
+          "CodingSchemeDesignator": "SCT",
+          "CodeMeaning": "Liver"
+        },
+        "recommendedDisplayRGBValue": [
+          221,
+          130,
+          101
+        ]
+      },
+      {
+        "labelID": 6,
+        "SegmentDescription": "Stomach",
+        "SegmentAlgorithmType": "AUTOMATIC",
+        "SegmentAlgorithmName": "Auto3DSeg-segresnet",
+        "SegmentedPropertyCategoryCodeSequence": {
+          "CodeValue": "123037004",
+          "CodingSchemeDesignator": "SCT",
+          "CodeMeaning": "Anatomical Structure"
+        },
+        "SegmentedPropertyTypeCodeSequence": {
+          "CodeValue": "69695003",
+          "CodingSchemeDesignator": "SCT",
+          "CodeMeaning": "Stomach"
+        },
+        "recommendedDisplayRGBValue": [
+          216,
+          132,
+          105
+        ]
+      },
+      {
+        "labelID": 7,
+        "SegmentDescription": "Pancreas",
+        "SegmentAlgorithmType": "AUTOMATIC",
+        "SegmentAlgorithmName": "Auto3DSeg-segresnet",
+        "SegmentedPropertyCategoryCodeSequence": {
+          "CodeValue": "123037004",
+          "CodingSchemeDesignator": "SCT",
+          "CodeMeaning": "Anatomical Structure"
+        },
+        "SegmentedPropertyTypeCodeSequence": {
+          "CodeValue": "15776009",
+          "CodingSchemeDesignator": "SCT",
+          "CodeMeaning": "Pancreas"
+        },
+        "recommendedDisplayRGBValue": [
+          249,
+          180,
+          111
+        ]
+      },
+      {
+        "labelID": 8,
+        "SegmentDescription": "Unknown8",
+        "SegmentAlgorithmType": "AUTOMATIC",
+        "SegmentAlgorithmName": "Auto3DSeg-segresnet",
+        "SegmentedPropertyCategoryCodeSequence": {
+          "CodeValue": "123037004",
+          "CodingSchemeDesignator": "SCT",
+          "CodeMeaning": "Anatomical Structure"
+        },
+        "SegmentedPropertyTypeCodeSequence": {
+          "CodeValue": "64033007",
+          "CodingSchemeDesignator": "SCT",
+          "CodeMeaning": "Kidney"
+        },
+        "SegmentedPropertyTypeModifierCodeSequence": {
+          "CodeValue": "24028007",
+          "CodingSchemeDesignator": "SCT",
+          "CodeMeaning": "Right"
+        },
+        "recommendedDisplayRGBValue": [
+          205,
+          149,
+          149
+        ]
+      },
+      {
+        "labelID": 9,
+        "SegmentDescription": "Left Adrenal Gland",
+        "SegmentAlgorithmType": "AUTOMATIC",
+        "SegmentAlgorithmName": "Auto3DSeg-segresnet",
+        "SegmentedPropertyCategoryCodeSequence": {
+          "CodeValue": "123037004",
+          "CodingSchemeDesignator": "SCT",
+          "CodeMeaning": "Anatomical Structure"
+        },
+        "SegmentedPropertyTypeCodeSequence": {
+          "CodeValue": "23451007",
+          "CodingSchemeDesignator": "SCT",
+          "CodeMeaning": "Adrenal gland"
+        },
+        "SegmentedPropertyTypeModifierCodeSequence": {
+          "CodeValue": "7771000",
+          "CodingSchemeDesignator": "SCT",
+          "CodeMeaning": "Left"
+        },
+        "recommendedDisplayRGBValue": [
+          235,
+          172,
+          172
+        ]
+      },
+      {
+        "labelID": 10,
+        "SegmentDescription": "Superior Lobe Left Lung",
+        "SegmentAlgorithmType": "AUTOMATIC",
+        "SegmentAlgorithmName": "Auto3DSeg-segresnet",
+        "SegmentedPropertyCategoryCodeSequence": {
+          "CodeValue": "123037004",
+          "CodingSchemeDesignator": "SCT",
+          "CodeMeaning": "Anatomical Structure"
+        },
+        "SegmentedPropertyTypeCodeSequence": {
+          "CodeValue": "45653009",
+          "CodingSchemeDesignator": "SCT",
+          "CodeMeaning": "Upper lobe of lung"
+        },
+        "SegmentedPropertyTypeModifierCodeSequence": {
+          "CodeValue": "7771000",
+          "CodingSchemeDesignator": "SCT",
+          "CodeMeaning": "Left"
+        },
+        "recommendedDisplayRGBValue": [
+          94,
+          71,
+          71
+        ]
+      },
+      {
+        "labelID": 11,
+        "SegmentDescription": "Lower lobe Left Lung",
+        "SegmentAlgorithmType": "AUTOMATIC",
+        "SegmentAlgorithmName": "Auto3DSeg-segresnet",
+        "SegmentedPropertyCategoryCodeSequence": {
+          "CodeValue": "123037004",
+          "CodingSchemeDesignator": "SCT",
+          "CodeMeaning": "Anatomical Structure"
+        },
+        "SegmentedPropertyTypeCodeSequence": {
+          "CodeValue": "90572001",
+          "CodingSchemeDesignator": "SCT",
+          "CodeMeaning": "Lower lobe of lung"
+        },
+        "SegmentedPropertyTypeModifierCodeSequence": {
+          "CodeValue": "7771000",
+          "CodingSchemeDesignator": "SCT",
+          "CodeMeaning": "Left"
+        },
+        "recommendedDisplayRGBValue": [
+          204,
+          195,
+          168
+        ]
+      },
+      {
+        "labelID": 12,
+        "SegmentDescription": "Upper Lobe Right Lung",
+        "SegmentAlgorithmType": "AUTOMATIC",
+        "SegmentAlgorithmName": "Auto3DSeg-segresnet",
+        "SegmentedPropertyCategoryCodeSequence": {
+          "CodeValue": "123037004",
+          "CodingSchemeDesignator": "SCT",
+          "CodeMeaning": "Anatomical Structure"
+        },
+        "SegmentedPropertyTypeCodeSequence": {
+          "CodeValue": "45653009",
+          "CodingSchemeDesignator": "SCT",
+          "CodeMeaning": "Upper lobe of lung"
+        },
+        "SegmentedPropertyTypeModifierCodeSequence": {
+          "CodeValue": "24028007",
+          "CodingSchemeDesignator": "SCT",
+          "CodeMeaning": "Right"
+        },
+        "recommendedDisplayRGBValue": [
+          151,
+          149,
+          149
+        ]
+      },
+      {
+        "labelID": 13,
+        "SegmentDescription": "Middle Lobe Right Lung",
+        "SegmentAlgorithmType": "AUTOMATIC",
+        "SegmentAlgorithmName": "Auto3DSeg-segresnet",
+        "SegmentedPropertyCategoryCodeSequence": {
+          "CodeValue": "123037004",
+          "CodingSchemeDesignator": "SCT",
+          "CodeMeaning": "Anatomical Structure"
+        },
+        "SegmentedPropertyTypeCodeSequence": {
+          "CodeValue": "72481006",
+          "CodingSchemeDesignator": "SCT",
+          "CodeMeaning": "Middle lobe of right lung"
+        },
+        "recommendedDisplayRGBValue": [
+          202,
+          164,
+          140
+        ]
+      },
+      {
+        "labelID": 14,
+        "SegmentDescription": "Lower Lobe Right Lung",
+        "SegmentAlgorithmType": "AUTOMATIC",
+        "SegmentAlgorithmName": "Auto3DSeg-segresnet",
+        "SegmentedPropertyCategoryCodeSequence": {
+          "CodeValue": "123037004",
+          "CodingSchemeDesignator": "SCT",
+          "CodeMeaning": "Anatomical Structure"
+        },
+        "SegmentedPropertyTypeCodeSequence": {
+          "CodeValue": "90572001",
+          "CodingSchemeDesignator": "SCT",
+          "CodeMeaning": "Lower lobe of lung"
+        },
+        "SegmentedPropertyTypeModifierCodeSequence": {
+          "CodeValue": "24028007",
+          "CodingSchemeDesignator": "SCT",
+          "CodeMeaning": "Right"
+        },
+        "recommendedDisplayRGBValue": [
+          208,
+          206,
+          179
+        ]
+      },
+      {
+        "labelID": 15,
+        "SegmentDescription": "Esophagus",
+        "SegmentAlgorithmType": "AUTOMATIC",
+        "SegmentAlgorithmName": "Auto3DSeg-segresnet",
+        "SegmentedPropertyCategoryCodeSequence": {
+          "CodeValue": "123037004",
+          "CodingSchemeDesignator": "SCT",
+          "CodeMeaning": "Anatomical Structure"
+        },
+        "SegmentedPropertyTypeCodeSequence": {
+          "CodeValue": "32849002",
+          "CodingSchemeDesignator": "SCT",
+          "CodeMeaning": "Esophagus"
+        },
+        "recommendedDisplayRGBValue": [
+          211,
+          171,
+          143
+        ]
+      },
+      {
+        "labelID": 16,
+        "SegmentDescription": "Trachea",
+        "SegmentAlgorithmType": "AUTOMATIC",
+        "SegmentAlgorithmName": "Auto3DSeg-segresnet",
+        "SegmentedPropertyCategoryCodeSequence": {
+          "CodeValue": "123037004",
+          "CodingSchemeDesignator": "SCT",
+          "CodeMeaning": "Anatomical Structure"
+        },
+        "SegmentedPropertyTypeCodeSequence": {
+          "CodeValue": "44567001",
+          "CodingSchemeDesignator": "SCT",
+          "CodeMeaning": "Trachea"
+        },
+        "recommendedDisplayRGBValue": [
+          182,
+          228,
+          255
+        ]
+      },
+      {
+        "labelID": 17,
+        "SegmentDescription": "Unknown17",
+        "SegmentAlgorithmType": "AUTOMATIC",
+        "SegmentAlgorithmName": "Auto3DSeg-segresnet",
+        "SegmentedPropertyCategoryCodeSequence": {
+          "CodeValue": "123037004",
+          "CodingSchemeDesignator": "SCT",
+          "CodeMeaning": "Anatomical Structure"
+        },
+        "SegmentedPropertyTypeCodeSequence": {
+          "CodeValue": "64033007",
+          "CodingSchemeDesignator": "SCT",
+          "CodeMeaning": "Kidney"
+        },
+        "SegmentedPropertyTypeModifierCodeSequence": {
+          "CodeValue": "24028007",
+          "CodingSchemeDesignator": "SCT",
+          "CodeMeaning": "Right"
+        },
+        "recommendedDisplayRGBValue": [
+          205,
+          149,
+          149
+        ]
+      },
+      {
+        "labelID": 18,
+        "SegmentDescription": "Unknown18",
+        "SegmentAlgorithmType": "AUTOMATIC",
+        "SegmentAlgorithmName": "Auto3DSeg-segresnet",
+        "SegmentedPropertyCategoryCodeSequence": {
+          "CodeValue": "123037004",
+          "CodingSchemeDesignator": "SCT",
+          "CodeMeaning": "Anatomical Structure"
+        },
+        "SegmentedPropertyTypeCodeSequence": {
+          "CodeValue": "64033007",
+          "CodingSchemeDesignator": "SCT",
+          "CodeMeaning": "Kidney"
+        },
+        "SegmentedPropertyTypeModifierCodeSequence": {
+          "CodeValue": "24028007",
+          "CodingSchemeDesignator": "SCT",
+          "CodeMeaning": "Right"
+        },
+        "recommendedDisplayRGBValue": [
+          205,
+          149,
+          149
+        ]
+      },
+      {
+        "labelID": 19,
+        "SegmentDescription": "Duodenom",
+        "SegmentAlgorithmType": "AUTOMATIC",
+        "SegmentAlgorithmName": "Auto3DSeg-segresnet",
+        "SegmentedPropertyCategoryCodeSequence": {
+          "CodeValue": "123037004",
+          "CodingSchemeDesignator": "SCT",
+          "CodeMeaning": "Anatomical Structure"
+        },
+        "SegmentedPropertyTypeCodeSequence": {
+          "CodeValue": "38848004",
+          "CodingSchemeDesignator": "SCT",
+          "CodeMeaning": "Duodenum"
+        },
+        "recommendedDisplayRGBValue": [
+          255,
+          253,
+          229
+        ]
+      },
+      {
+        "labelID": 20,
+        "SegmentDescription": "Colon",
+        "SegmentAlgorithmType": "AUTOMATIC",
+        "SegmentAlgorithmName": "Auto3DSeg-segresnet",
+        "SegmentedPropertyCategoryCodeSequence": {
+          "CodeValue": "123037004",
+          "CodingSchemeDesignator": "SCT",
+          "CodeMeaning": "Anatomical Structure"
+        },
+        "SegmentedPropertyTypeCodeSequence": {
+          "CodeValue": "71854001",
+          "CodingSchemeDesignator": "SCT",
+          "CodeMeaning": "Colon"
+        },
+        "recommendedDisplayRGBValue": [
+          204,
+          168,
+          143
+        ]
+      },
+      {
+        "labelID": 21,
+        "SegmentDescription": "Unknown21",
+        "SegmentAlgorithmType": "AUTOMATIC",
+        "SegmentAlgorithmName": "Auto3DSeg-segresnet",
+        "SegmentedPropertyCategoryCodeSequence": {
+          "CodeValue": "123037004",
+          "CodingSchemeDesignator": "SCT",
+          "CodeMeaning": "Anatomical Structure"
+        },
+        "SegmentedPropertyTypeCodeSequence": {
+          "CodeValue": "64033007",
+          "CodingSchemeDesignator": "SCT",
+          "CodeMeaning": "Kidney"
+        },
+        "SegmentedPropertyTypeModifierCodeSequence": {
+          "CodeValue": "24028007",
+          "CodingSchemeDesignator": "SCT",
+          "CodeMeaning": "Right"
+        },
+        "recommendedDisplayRGBValue": [
+          205,
+          149,
+          149
+        ]
+      },
+      {
+        "labelID": 22,
+        "SegmentDescription": "Unknown22",
+        "SegmentAlgorithmType": "AUTOMATIC",
+        "SegmentAlgorithmName": "Auto3DSeg-segresnet",
+        "SegmentedPropertyCategoryCodeSequence": {
+          "CodeValue": "123037004",
+          "CodingSchemeDesignator": "SCT",
+          "CodeMeaning": "Anatomical Structure"
+        },
+        "SegmentedPropertyTypeCodeSequence": {
+          "CodeValue": "64033007",
+          "CodingSchemeDesignator": "SCT",
+          "CodeMeaning": "Kidney"
+        },
+        "SegmentedPropertyTypeModifierCodeSequence": {
+          "CodeValue": "24028007",
+          "CodingSchemeDesignator": "SCT",
+          "CodeMeaning": "Right"
+        },
+        "recommendedDisplayRGBValue": [
+          205,
+          149,
+          149
+        ]
+      },
+      {
+        "labelID": 23,
+        "SegmentDescription": "Unknown23",
+        "SegmentAlgorithmType": "AUTOMATIC",
+        "SegmentAlgorithmName": "Auto3DSeg-segresnet",
+        "SegmentedPropertyCategoryCodeSequence": {
+          "CodeValue": "123037004",
+          "CodingSchemeDesignator": "SCT",
+          "CodeMeaning": "Anatomical Structure"
+        },
+        "SegmentedPropertyTypeCodeSequence": {
+          "CodeValue": "64033007",
+          "CodingSchemeDesignator": "SCT",
+          "CodeMeaning": "Kidney"
+        },
+        "SegmentedPropertyTypeModifierCodeSequence": {
+          "CodeValue": "24028007",
+          "CodingSchemeDesignator": "SCT",
+          "CodeMeaning": "Right"
+        },
+        "recommendedDisplayRGBValue": [
+          205,
+          149,
+          149
+        ]
+      },
+      {
+        "labelID": 24,
+        "SegmentDescription": "Unknown24",
+        "SegmentAlgorithmType": "AUTOMATIC",
+        "SegmentAlgorithmName": "Auto3DSeg-segresnet",
+        "SegmentedPropertyCategoryCodeSequence": {
+          "CodeValue": "123037004",
+          "CodingSchemeDesignator": "SCT",
+          "CodeMeaning": "Anatomical Structure"
+        },
+        "SegmentedPropertyTypeCodeSequence": {
+          "CodeValue": "64033007",
+          "CodingSchemeDesignator": "SCT",
+          "CodeMeaning": "Kidney"
+        },
+        "SegmentedPropertyTypeModifierCodeSequence": {
+          "CodeValue": "24028007",
+          "CodingSchemeDesignator": "SCT",
+          "CodeMeaning": "Right"
+        },
+        "recommendedDisplayRGBValue": [
+          205,
+          149,
+          149
+        ]
+      }
+    ]
+  ],
+  "ContentLabel": "SEGMENTATION",
+  "ContentDescription": "Image segmentation",
+  "ClinicalTrialCoordinatingCenterName": "dcmqi"
+}
